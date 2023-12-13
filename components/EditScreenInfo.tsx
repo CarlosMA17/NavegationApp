@@ -1,17 +1,21 @@
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
-
+import { DrawerNavigator } from './Navigation/DrawerNavigation'; 
 import Colors from '../constants/Colors';
 import { ExternalLink } from './ExternalLink';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
-    <View>
-      <View style={styles.getStartedContainer}>
+    
 
+    <View>
+      
+      <View style={styles.getStartedContainer}>
+        
       <View style={styles.circleContainer}>
         <Image
           source={require('../assets/images/imagenCalavera.jpg')}
