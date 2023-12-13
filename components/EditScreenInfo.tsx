@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 import Colors from '../constants/Colors';
 import { ExternalLink } from './ExternalLink';
@@ -11,6 +11,14 @@ export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
+
+      <View style={styles.circleContainer}>
+        <Image
+          source={require('../assets/images/imagenCalavera.jpg')}
+          style={styles.centeredImage}
+        />
+      </View>
+
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
@@ -50,6 +58,19 @@ const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
+  },
+  circleContainer: {
+    width: 150,
+    height: 150,
+    borderRadius: 75, 
+    overflow: 'hidden', 
+    marginBottom: 20, 
+  },
+  centeredImage: {
+    flex: 1, 
+    width: undefined, 
+    height: undefined, 
+    resizeMode: 'cover', 
   },
   homeScreenFilename: {
     marginVertical: 7,
